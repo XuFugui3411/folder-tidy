@@ -1,0 +1,45 @@
+name: Build Windows release
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    tags: ['v*']
+concurrency:
+  group: folder-tidy-release
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          architecture: x64
+      - run: python -m pip install -r requirements-build.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python tools/build_release.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FolderTidy-windows-x64
+          path: releases/*
+      - name: Publish versioned release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: pwsh
+        run: |
+          $version = python -c "from desktop_install import VERSION; print(VERSION)"
+          $releaseTag = "v$version"
+          gh release view $releaseTag *> $null
+          if ($LASTEXITCODE -eq 0) {
+            Write-Output "Release $releaseTag already exists; keeping published files."
+            exit 0
+          }
+          $releaseAssets = @(Get-ChildItem releases -File | ForEach-Object { $_.FullName })
+          gh release create $releaseTag @releaseAssets --target $env:GITHUB_SHA --title "Folder Tidy $releaseTag" --notes-file docs/release-notes.md
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
