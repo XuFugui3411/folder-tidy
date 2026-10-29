@@ -1,0 +1,376 @@
+{
+  "measured_at": "2026-10-29T17:03:56.098907+08:00",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "machine": "AMD64",
+  "core_sha256": "cc8605114e5563ed71eb034dd44bf1b82e11dce664664e92fd3e0b5db36c5af8",
+  "repeats": 3,
+  "cache_policy": "Freshly written fixtures; OS cache is not flushed. Not a cold-disk benchmark.",
+  "instrumentation": "Real identity/save calls wrapped for timing; byte counts are logical full-file reads and UTF-8 JSON file lengths, not physical device I/O.",
+  "environment": {
+    "cpu": {
+      "Name": "13th Gen Intel(R) Core(TM) i9-13900HX",
+      "NumberOfCores": 24,
+      "NumberOfLogicalProcessors": 32
+    },
+    "storage": {
+      "FriendlyName": "SAMSUNG MZVL21T0HCLR-00BL2",
+      "MediaType": "SSD",
+      "BusType": "NVMe"
+    },
+    "volume": {
+      "DriveLetter": "D",
+      "FileSystem": "NTFS",
+      "Size": 807072165888
+    },
+    "power_note": "Power mode, temperature, background load and antivirus state were not controlled."
+  },
+  "results": [
+    {
+      "case": "small-100",
+      "trial": 1,
+      "files": 100,
+      "bytes_per_file": 4096,
+      "payload_bytes": 409600,
+      "scan_seconds": 0.037623199983499944,
+      "execution": {
+        "identity_calls": 400,
+        "hash_read_bytes": 1638400,
+        "hash_seconds": 0.21740100026363507,
+        "journal_writes": 201,
+        "journal_bytes": 3637957,
+        "journal_seconds": 0.9569530001026578,
+        "wall_seconds": 1.3014593999832869
+      },
+      "undo": {
+        "identity_calls": 400,
+        "hash_read_bytes": 1638400,
+        "hash_seconds": 0.2191432996187359,
+        "journal_writes": 200,
+        "journal_bytes": 7162400,
+        "journal_seconds": 1.086434600292705,
+        "wall_seconds": 1.4291477000224404
+      },
+      "final_journal_bytes": 35760
+    },
+    {
+      "case": "small-100",
+      "trial": 2,
+      "files": 100,
+      "bytes_per_file": 4096,
+      "payload_bytes": 409600,
+      "scan_seconds": 0.03672559995902702,
+      "execution": {
+        "identity_calls": 400,
+        "hash_read_bytes": 1638400,
+        "hash_seconds": 0.2179503997322172,
+        "journal_writes": 201,
+        "journal_bytes": 3637957,
+        "journal_seconds": 4.493376500555314,
+        "wall_seconds": 4.837545800022781
+      },
+      "undo": {
+        "identity_calls": 400,
+        "hash_read_bytes": 1638400,
+        "hash_seconds": 0.21440689952578396,
+        "journal_writes": 200,
+        "journal_bytes": 7162400,
+        "journal_seconds": 1.0893324004136957,
+        "wall_seconds": 1.426150300016161
+      },
+      "final_journal_bytes": 35760
+    },
+    {
+      "case": "small-100",
+      "trial": 3,
+      "files": 100,
+      "bytes_per_file": 4096,
+      "payload_bytes": 409600,
+      "scan_seconds": 0.037630699982400984,
+      "execution": {
+        "identity_calls": 400,
+        "hash_read_bytes": 1638400,
+        "hash_seconds": 0.2166618006885983,
+        "journal_writes": 201,
+        "journal_bytes": 3648057,
+        "journal_seconds": 1.7476165003608912,
+        "wall_seconds": 2.093664499989245
+      },
+      "undo": {
+        "identity_calls": 400,
+        "hash_read_bytes": 1638400,
+        "hash_seconds": 0.21776600053999573,
+        "journal_writes": 200,
+        "journal_bytes": 7182400,
+        "journal_seconds": 1.10992720030481,
+        "wall_seconds": 1.4479457000270486
+      },
+      "final_journal_bytes": 35860
+    },
+    {
+      "case": "small-500",
+      "trial": 1,
+      "files": 500,
+      "bytes_per_file": 4096,
+      "payload_bytes": 2048000,
+      "scan_seconds": 0.19346420001238585,
+      "execution": {
+        "identity_calls": 2000,
+        "hash_read_bytes": 8192000,
+        "hash_seconds": 1.0964335006428882,
+        "journal_writes": 1001,
+        "journal_bytes": 89286013,
+        "journal_seconds": 10.275165100872982,
+        "wall_seconds": 12.010231799969915
+      },
+      "undo": {
+        "identity_calls": 2000,
+        "hash_read_bytes": 8192000,
+        "hash_seconds": 1.1218921011313796,
+        "journal_writes": 1000,
+        "journal_bytes": 178121000,
+        "journal_seconds": 11.38559299998451,
+        "wall_seconds": 13.128126800002065
+      },
+      "final_journal_bytes": 177869
+    },
+    {
+      "case": "small-500",
+      "trial": 2,
+      "files": 500,
+      "bytes_per_file": 4096,
+      "payload_bytes": 2048000,
+      "scan_seconds": 0.2055468000471592,
+      "execution": {
+        "identity_calls": 2000,
+        "hash_read_bytes": 8192000,
+        "hash_seconds": 1.1255017003277317,
+        "journal_writes": 1001,
+        "journal_bytes": 89286013,
+        "journal_seconds": 8.277281799877528,
+        "wall_seconds": 10.059556799998973
+      },
+      "undo": {
+        "identity_calls": 2000,
+        "hash_read_bytes": 8192000,
+        "hash_seconds": 1.1190716996206902,
+        "journal_writes": 1000,
+        "journal_bytes": 178121000,
+        "journal_seconds": 11.222333899815567,
+        "wall_seconds": 12.990319299977273
+      },
+      "final_journal_bytes": 177869
+    },
+    {
+      "case": "small-500",
+      "trial": 3,
+      "files": 500,
+      "bytes_per_file": 4096,
+      "payload_bytes": 2048000,
+      "scan_seconds": 0.18973089999053627,
+      "execution": {
+        "identity_calls": 2000,
+        "hash_read_bytes": 8192000,
+        "hash_seconds": 1.1246755003230646,
+        "journal_writes": 1001,
+        "journal_bytes": 89442433,
+        "journal_seconds": 9.435325099155307,
+        "wall_seconds": 11.22022180003114
+      },
+      "undo": {
+        "identity_calls": 2000,
+        "hash_read_bytes": 8192000,
+        "hash_seconds": 1.1458433998050168,
+        "journal_writes": 1000,
+        "journal_bytes": 178516000,
+        "journal_seconds": 13.91118130099494,
+        "wall_seconds": 15.706640499993227
+      },
+      "final_journal_bytes": 178264
+    },
+    {
+      "case": "small-1000",
+      "trial": 1,
+      "files": 1000,
+      "bytes_per_file": 4096,
+      "payload_bytes": 4096000,
+      "scan_seconds": 0.3744516000151634,
+      "execution": {
+        "identity_calls": 4000,
+        "hash_read_bytes": 16384000,
+        "hash_seconds": 2.2102185981348157,
+        "journal_writes": 2001,
+        "journal_bytes": 356645890,
+        "journal_seconds": 26.149760498199612,
+        "wall_seconds": 29.64584139996441
+      },
+      "undo": {
+        "identity_calls": 4000,
+        "hash_read_bytes": 16384000,
+        "hash_seconds": 2.285426299495157,
+        "journal_writes": 2000,
+        "journal_bytes": 712552000,
+        "journal_seconds": 29.192587700963486,
+        "wall_seconds": 32.69984630000545
+      },
+      "final_journal_bytes": 355774
+    },
+    {
+      "case": "small-1000",
+      "trial": 2,
+      "files": 1000,
+      "bytes_per_file": 4096,
+      "payload_bytes": 4096000,
+      "scan_seconds": 0.4040058000246063,
+      "execution": {
+        "identity_calls": 4000,
+        "hash_read_bytes": 16384000,
+        "hash_seconds": 2.3070801000576466,
+        "journal_writes": 2001,
+        "journal_bytes": 356645890,
+        "journal_seconds": 22.085255599755328,
+        "wall_seconds": 25.735543599992525
+      },
+      "undo": {
+        "identity_calls": 4000,
+        "hash_read_bytes": 16384000,
+        "hash_seconds": 2.6418729990837164,
+        "journal_writes": 2000,
+        "journal_bytes": 712552000,
+        "journal_seconds": 32.297301599232014,
+        "wall_seconds": 36.413356100034434
+      },
+      "final_journal_bytes": 355774
+    },
+    {
+      "case": "small-1000",
+      "trial": 3,
+      "files": 1000,
+      "bytes_per_file": 4096,
+      "payload_bytes": 4096000,
+      "scan_seconds": 0.39122769999084994,
+      "execution": {
+        "identity_calls": 4000,
+        "hash_read_bytes": 16384000,
+        "hash_seconds": 2.227261900086887,
+        "journal_writes": 2001,
+        "journal_bytes": 356891410,
+        "journal_seconds": 20.7276987003861,
+        "wall_seconds": 24.263840400031768
+      },
+      "undo": {
+        "identity_calls": 4000,
+        "hash_read_bytes": 16384000,
+        "hash_seconds": 2.2308965009870008,
+        "journal_writes": 2000,
+        "journal_bytes": 713542000,
+        "journal_seconds": 30.778892499336507,
+        "wall_seconds": 34.20319140003994
+      },
+      "final_journal_bytes": 356269
+    },
+    {
+      "case": "large-4x128MiB",
+      "trial": 1,
+      "files": 4,
+      "bytes_per_file": 134217728,
+      "payload_bytes": 536870912,
+      "scan_seconds": 0.17143009998835623,
+      "execution": {
+        "identity_calls": 16,
+        "hash_read_bytes": 2147483648,
+        "hash_seconds": 1.138105999736581,
+        "journal_writes": 9,
+        "journal_bytes": 9547,
+        "journal_seconds": 0.059103599982336164,
+        "wall_seconds": 1.203827999997884
+      },
+      "undo": {
+        "identity_calls": 16,
+        "hash_read_bytes": 2147483648,
+        "hash_seconds": 1.1429498998913914,
+        "journal_writes": 8,
+        "journal_bytes": 13648,
+        "journal_seconds": 0.050548399973195046,
+        "wall_seconds": 1.2008701000013389
+      },
+      "final_journal_bytes": 1702
+    },
+    {
+      "case": "large-4x128MiB",
+      "trial": 2,
+      "files": 4,
+      "bytes_per_file": 134217728,
+      "payload_bytes": 536870912,
+      "scan_seconds": 0.022544900013599545,
+      "execution": {
+        "identity_calls": 16,
+        "hash_read_bytes": 2147483648,
+        "hash_seconds": 1.1333566000685096,
+        "journal_writes": 9,
+        "journal_bytes": 9547,
+        "journal_seconds": 0.15993320004781708,
+        "wall_seconds": 1.3000576000194997
+      },
+      "undo": {
+        "identity_calls": 16,
+        "hash_read_bytes": 2147483648,
+        "hash_seconds": 1.1334246001206338,
+        "journal_writes": 8,
+        "journal_bytes": 13648,
+        "journal_seconds": 0.04412529995897785,
+        "wall_seconds": 1.1849308999953791
+      },
+      "final_journal_bytes": 1702
+    },
+    {
+      "case": "large-4x128MiB",
+      "trial": 3,
+      "files": 4,
+      "bytes_per_file": 134217728,
+      "payload_bytes": 536870912,
+      "scan_seconds": 0.0017121999990195036,
+      "execution": {
+        "identity_calls": 16,
+        "hash_read_bytes": 2147483648,
+        "hash_seconds": 1.1133574999403208,
+        "journal_writes": 9,
+        "journal_bytes": 9547,
+        "journal_seconds": 0.0497436000732705,
+        "wall_seconds": 1.1698622000403702
+      },
+      "undo": {
+        "identity_calls": 16,
+        "hash_read_bytes": 2147483648,
+        "hash_seconds": 1.1173193999566138,
+        "journal_writes": 8,
+        "journal_bytes": 13648,
+        "journal_seconds": 0.04127200011862442,
+        "wall_seconds": 1.1656046999851242
+      },
+      "final_journal_bytes": 1702
+    }
+  ],
+  "summary": [
+    {
+      "case": "small-100",
+      "execute_median": 2.093664499989245,
+      "undo_median": 1.4291477000224404
+    },
+    {
+      "case": "small-500",
+      "execute_median": 11.22022180003114,
+      "undo_median": 13.128126800002065
+    },
+    {
+      "case": "small-1000",
+      "execute_median": 25.735543599992525,
+      "undo_median": 34.20319140003994
+    },
+    {
+      "case": "large-4x128MiB",
+      "execute_median": 1.203827999997884,
+      "undo_median": 1.1849308999953791
+    }
+  ]
+}

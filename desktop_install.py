@@ -7,7 +7,7 @@ import subprocess
 import sys
 import uuid
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 
 
 def copy_application(source: Path, programs: Path) -> Path:
@@ -18,7 +18,7 @@ def copy_application(source: Path, programs: Path) -> Path:
     directory.mkdir()  # a new version never overwrites a running installation
     shutil.copy2(source / 'FolderTidy.exe', directory / 'FolderTidy.exe')
     shutil.copytree(source / '_internal', directory / '_internal')
-    for name in ('使用说明.txt', 'THIRD-PARTY-NOTICES.txt'):
+    for name in ('使用说明.txt', 'THIRD-PARTY-NOTICES.txt', 'LICENSE'):
         if (source / name).is_file():
             shutil.copy2(source / name, directory / name)
     return directory

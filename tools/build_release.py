@@ -56,6 +56,7 @@ def build():
     ], cwd=ROOT, check=True)
     folder = ROOT / 'dist' / 'FolderTidy'
     shutil.copy2(ROOT / 'docs' / '使用说明.txt', folder / '使用说明.txt')
+    shutil.copy2(ROOT / 'LICENSE', folder / 'LICENSE')
     # Batch launcher is ASCII; it invokes the bundled runtime, not system Python.
     (folder / '安装到桌面.cmd').write_bytes(
         b'@echo off\r\nstart "" "%~dp0FolderTidy.exe" --install-desktop\r\n')
@@ -86,12 +87,16 @@ def build():
     source = output / f'folder-tidy-{VERSION}-source.zip'
     with zipfile.ZipFile(source, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(ROOT.iterdir()):
-            if path.is_file() and (path.suffix in {'.py', '.pyw', '.cmd'} or path.name in {'README.md', '.gitignore', 'requirements-build.txt'}):
+            if path.is_file() and (path.suffix in {'.py', '.pyw', '.cmd'} or path.name in {'LICENSE', 'README.md', '.gitignore', 'requirements-build.txt'}):
                 archive.write(path, str(Path('folder-tidy') / path.name))
         for name in ('tests', 'tools', 'docs', '.github'):
             for path in sorted((ROOT / name).rglob('*')):
                 if path.is_file() and '__pycache__' not in path.parts:
                     archive.write(path, str(Path('folder-tidy') / path.relative_to(ROOT)))
+    with zipfile.ZipFile(portable) as archive:
+        assert archive.read('FolderTidy/LICENSE') == (ROOT / 'LICENSE').read_bytes()
+    with zipfile.ZipFile(source) as archive:
+        assert archive.read('folder-tidy/LICENSE') == (ROOT / 'LICENSE').read_bytes()
     checksums = '\n'.join(hashlib.sha256(p.read_bytes()).hexdigest() + '  ' + p.name for p in (portable, source)) + '\n'
     (output / 'SHA256SUMS.txt').write_text(checksums, encoding='utf-8')
     print(checksums)

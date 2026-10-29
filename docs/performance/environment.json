@@ -1,0 +1,18 @@
+{
+  "cpu": {
+    "Name": "13th Gen Intel(R) Core(TM) i9-13900HX",
+    "NumberOfCores": 24,
+    "NumberOfLogicalProcessors": 32
+  },
+  "storage": {
+    "FriendlyName": "SAMSUNG MZVL21T0HCLR-00BL2",
+    "MediaType": "SSD",
+    "BusType": "NVMe"
+  },
+  "volume": {
+    "DriveLetter": "D",
+    "FileSystem": "NTFS",
+    "Size": 807072165888
+  },
+  "power_note": "Power mode, temperature, background load and antivirus state were not controlled."
+}

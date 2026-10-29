@@ -6,6 +6,8 @@
 
 [下载 Windows 版](https://github.com/XuFugui3411/folder-tidy/releases/latest) · [使用说明](docs/使用说明.txt)
 
+许可证：[MIT](LICENSE)。性能实测：[2026-10-29 基线报告](docs/performance/README.md)。
+
 ## 界面预览
 
 ![Folder Tidy 文件整理预览：扫描统计、逐项移动方案、同名文件编号及临时文件跳过提示](docs/images/folder-tidy-preview.jpg)
@@ -31,7 +33,7 @@
 
 ## 下载即用（Windows 10 / 11，64 位）
 
-在 [Releases 下载页](https://github.com/XuFugui3411/folder-tidy/releases/latest) 下载 `FolderTidy-1.0.0-windows-x64.zip`，完整解压后双击 **安装到桌面.cmd**。
+在 [Releases 下载页](https://github.com/XuFugui3411/folder-tidy/releases/latest) 下载 `FolderTidy-1.0.1-windows-x64.zip`，完整解压后双击 **安装到桌面.cmd**。
 
 安装会把软件复制到当前用户的固定目录，并在桌面创建 **文件整理助手** 启动图标。之后可删除下载包和解压目录，直接从桌面打开。无需安装 Python、无需联网、无需管理员权限。
 

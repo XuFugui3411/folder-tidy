@@ -1,4 +1,4 @@
-Folder Tidy · 文件整理助手 v1.0.0
+Folder Tidy · 文件整理助手 v1.0.1
 适用：Windows 10 / Windows 11，64 位。
 无需安装 Python，无需联网，无需管理员权限。
 
